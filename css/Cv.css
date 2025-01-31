@@ -1,0 +1,221 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	display: grid;
+	justify-content: center;
+}
+
+header, footer{
+	height: 50px;
+}
+
+.MainSectionContainer{
+	display: grid;
+	grid-row-gap: 20px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+}
+
+.HeaderMainContainer{
+	display: grid;
+	height: 200px;
+	background-color: #4A89DC;
+	background-image: url('../image/gridlines.svg');
+}
+
+.HeaderMainContent{
+	display: grid;
+	grid-column-gap: 80px;
+	grid-template-columns: auto 1fr;
+}
+
+.Avatar{
+	width: 150px;
+	height: 180px;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	background-color: #FFFFFF;
+	box-shadow: 0 .125rem .15rem rgba(0,0,0,.275);
+	transition: 0.18s;
+}
+
+.Avatar img{
+	width: 140px;
+	height: 170px;
+}
+
+.Avatar:hover{
+	top: 30px;
+}
+
+.Title{
+	height: 100%;
+	display: grid;
+	align-content: center;
+	grid-row-gap: 5px;
+	animation: TopMainAnimation 1s both;
+	animation-delay: 0.1s;
+}
+
+.NameAndPositionApplied{
+	color: #fff;
+	display: grid;
+	grid-row-gap: 5px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.NameAndPositionApplied>h1{
+	font-size: 35px;
+}
+
+.NameAndPositionApplied>p{
+	font-size: 20px;
+}
+
+.ButtonDownload{
+	width: 120px;
+	text-align: center;
+	padding: 10px 10px;
+	color: #000;
+	background-color: #fff;
+	border-radius: 50px;
+}
+
+.LineBreak{
+	height: 1px;
+	background-color: #ddd;
+}
+
+.AboutMainContent, .EducationContent, .SkillContent, .WorkExperienceContent{
+	padding: 0px 30px;
+	display: grid;
+	grid-row-gap: 10px;
+}
+
+.AboutMainContent{
+	grid-column-gap: 50px;
+	grid-template-columns: 1fr 1fr;
+}
+
+.CareerGoalsContainer, .PersonalInformationContainer{
+	display: grid;
+	grid-row-gap: 5px;
+	grid-template-rows: auto 1fr;
+}
+
+.TitleSection>h2{
+	font-size: 1.75rem;
+}
+
+.CareerGoals, .PersonalInformation{
+	display: grid;
+	align-content: start;
+	grid-row-gap: 5px;
+	padding-left: 20px;
+}
+
+.Timeline{
+	display: grid;
+	grid-row-gap: 10px;
+	border-left: 2px solid #ddd;
+}
+
+.CardBody{
+	position: relative;
+	display: grid;
+	grid-row-gap: 5px;
+	padding: 10px;
+	margin-left: 30px;
+	border-radius: 5px;
+	/*border: 1px solid rgba(0,0,0,.125);*/
+	border: 2px solid #4A89DC;
+	box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.CardBody:before{
+	content: "";
+	width: 7px;
+	height: 7px;
+	background-color: #4A89DC;
+	border-radius: 50%;
+	border: 2px solid #4A89DC;
+	display: inline-block;
+	position: absolute;
+	left: -37px;
+	top: 10px;
+}
+
+.CardBody:after{
+	content: "";
+	width: 30px;
+	height: 2px;
+	background-color: #4A89DC;
+	display: inline-block;
+	position: absolute;
+	left: -30px;
+	top: 14px;
+}
+
+span, h4{
+	color: #6c757d;
+}
+
+span{
+	font-size: 0.875rem;
+}
+
+h3{
+	font-size: 1.25rem;
+	display: inline-block;
+}
+
+h4{
+	font-size: 1rem;
+	display: inline-block;
+}
+
+@keyframes TopMainAnimation{
+	0%{
+		margin-left: 150px;
+		opacity: 0;
+	}
+	100%{
+		margin-left: 0;
+		opacity: 1;
+	}
+}
+
+@media print{
+	header, footer{
+		height: 0px;
+	}
+
+	.MainSectionContainer{
+		border-radius: 0px;
+		box-shadow: 0 0 0 rgba(0,0,0,0);
+	}
+
+	.Avatar{
+		position: relative;
+		top: 35px;
+		left: 35px;
+	}
+
+	.SkillContainer{
+		/*break-after: page;*/
+	}	
+}

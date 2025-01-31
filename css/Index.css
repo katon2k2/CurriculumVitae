@@ -1,0 +1,81 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	display: grid;
+	justify-content: center;
+}
+
+header, footer{
+	height: 50px;
+}
+
+main{
+	min-height: calc(100vh - 110px);
+	padding: 10px;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	grid-template-rows: 1fr;
+	background-color: #ccc;
+}
+
+.MainSectionContainer{
+	width: 1200px;
+	padding: 10px;
+	display: grid;
+	text-align: center;
+	grid-row-gap: 10px;
+	grid-template-rows: repeat(2, 1fr);
+	overflow: hidden;
+	border-radius: 5px;
+	background-color: #fff;
+	box-shadow: 0 0 .2rem rgba(0,0,0,.575);
+}
+
+.FunctionContainer{
+	height: 100%;
+	display: grid;
+	align-items: center;
+	border: solid 4px #4A89DC;
+	border-radius: 5px;
+}
+
+.FunctionContainer a{
+	width: 100%;
+	height: 100%;
+	color: #4A89DC;
+	display: grid;
+	align-items: center;
+}
+
+.FunctionContainer:hover a{
+	color: #fff;
+	background-color: #4A89DC;
+}
+
+.Content{
+	display: grid;
+	grid-row-gap: 10px;
+	align-items: center;
+	grid-template-columns: auto;
+	grid-template-rows: repeat(2, auto);
+}
+
+.FunctionContainer i{
+	font-size: 40px;
+}
+
+.FunctionContainer label{
+	font-size: 25px;
+}

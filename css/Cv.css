@@ -100,7 +100,7 @@ header, footer{
 	background-color: #ddd;
 }
 
-.AboutMainContent, .EducationContent, .SkillContent, .WorkExperienceContent{
+.AboutMainContent, .EducationContent, .SkillContent, .PetProjectContent, .WorkExperienceContent{
 	padding: 0px 30px;
 	display: grid;
 	grid-row-gap: 10px;
